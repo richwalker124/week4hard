@@ -1,0 +1,91 @@
+body{
+    background-color: red;
+}
+
+.row {
+    padding-top: 20px;
+}
+
+#cloud{
+    max-height: 100%;
+    max-width: 100%;
+    z-index: 100;
+/* position: absolute; */
+/* bottom: 0px; */
+left:0px;
+right: 0px;
+margin-left: auto;
+margin-right: auto;
+/* margin-top: 50px; */
+}
+
+#roy{
+    max-height: 100%;
+    max-width: 100%;
+    z-index: 100;
+    /* position: absolute; */
+    /* bottom: 0px; */
+    left:0px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 50px; */
+}
+
+#ridley{
+    max-height: 100%;
+    max-width: 100%;
+    z-index: 100;
+    /* position: absolute; */
+    /* bottom: 0px; */
+    left:0px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 50px; */
+}
+
+#incineroar{
+    max-height: 100%;
+    max-width: 100%;
+    z-index: 100;
+    /* position: absolute; */
+    /* bottom: 0px; */
+    left:0px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 50px; */
+}
+
+.char{
+    position: relative;
+    z-index: 100;
+    margin: 0px;
+    border: 0px;
+    padding:  0px;
+}
+
+.row-30{
+    /* row height is needed because it allows the images to be resized off of it. If its not present the images have nothing to resize off of. */
+    height: 200px;
+}
+
+h5{
+    padding-top: 20px;
+}
+
+.light {
+    height : 100%;
+    width: 100%;
+    z-index: 50;
+    position : absolute;
+    top : 0 ;
+    left : 0;
+    
+}
+
+.grayScale {
+    filter : grayscale( 100% );
+}
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <link rel="icon" href="assets/images/Smash_Ball.png">
+        <title>Smash Fight</title>
+    </head>
+
+  <body>
+    <div class = "container">
+            <div class = "jumbotron">
+              <h1 class = "text-center">Super Smash Javascript Battle</h1>
+              <h6 class = "text-center">See the bottom for instructions!</h6>
+            </div>
+      <div class = "row">
+            <!--This is where the characters will fight,-->
+            <div class = "col-md-2"></div>
+
+            <!--Player character slot-->
+            <div class = "col-md-3 border border-info fight-pc" id = "pc">
+        
+            </div>
+            <div class = "col-md-2"></div>
+
+            <!--CPU character slot-->
+            <div class = "col-md-3 border border-danger fight-cpu" id = "cpu">
+
+            </div>
+            <div class = "col-md-2"></div>
+
+      </div>
+
+      <div class = "row">
+        <!--This is where stats will be listed for the current characters as well as the buttons for attacks.-->
+        <div class = "col-md-2"></div>
+
+        <!--Player character slot-->
+        <div class = "col-md-3 border border-primary fight-pc" id = "pc-stats">
+            <h4 class = "text-center">Health: <span id = "pc-health"></span></h4>
+            <h4 class = "text-center">Attack: <span id = "pc-attack"></span></h4>
+        </div>
+        <div class = "col-md-2"></div>
+
+        <!--CPU character slot-->
+        <div class = "col-md-3 border border-warning fight-cpu" id = "cpu-stats">
+            <h4 class = "text-center">Health: <span id = "cpu-health"></span></h4>
+            <h4 class = "text-center">Attack: <span id = "cpu-attack"></span></h4>
+        </div>
+        <div class = "col-md-2"></div>
+
+     </div>
+
+     <!--This one holds waiting characters. They should light up or disappear when active or defeated.-->
+     <div class = "row row-30" >
+       <div class = "col-md-2"></div>
+
+       <!--Char slot one-->
+       <div class = "col-md-2 border border-light char" id = "slot-one">
+        <img  id = "roy" class = "roy-small" src = "assets/images/boy.png">
+       </div>
+
+      <!--Char slot two-->
+      <div class = "col-md-2 border border-dark char" id = "slot-two">
+          <img  id = "ridley" class = "ridley-small" src = "assets/images/dargon.png">
+      </div>
+
+      <!--Char slot three-->
+      <div class = "col-md-2 border border-light char" id = "slot-three">
+          <img  id = "cloud" class = "cloud-small" src = "assets/images/clod.png">
+      </div>
+
+      <!--Char slot four-->
+      <div class = "col-md-2 border border-dark char" id = "slot-four">
+          <img  id = "incineroar" class = "incineroar-small" src = "assets/images/cat.png">
+      </div>
+      <div class = "col-md-2"></div>
+     </div>
+
+     <!--This one holds waiting characters stats. They should light up or disappear when active or defeated. -->
+     <div class = "row">
+      <div class = "col-md-2"></div>
+
+      <!--Char slot one-->
+      <div class = "col-md-2 border border-dark" id = "slot-one-stats">
+        <h5 class = "text-center">Health: <span id = "roy-hp"></span></h5>
+        <br>
+        <h5 class = "text-center">Attack: <span id = "roy-att"></span></h5>
+      </div>
+
+     <!--Char slot two-->
+     <div class = "col-md-2 border border-light" id = "slot-two-stats">
+        <h5 class = "text-center">Health: <span id = "ridley-hp">200</span></h5>
+        <br>
+        <h5 class = "text-center">Attack: <span id = "ridley-att">20</span></h5>
+     </div>
+
+     <!--Char slot three-->
+     <div class = "col-md-2 border border-dark" id = "slot-three-stats">
+        <h5 class = "text-center">Health: <span id = "cloud-hp">200</span></h5>
+        <br>
+        <h5 class = "text-center">Attack: <span id = "cloud-att">20</span></h5>
+     </div>
+
+     <!--Char slot four-->
+     <div class = "col-md-2 border border-light" id = "slot-four-stats">
+        <h5 class = "text-center">Health: <span id = "incineroar-hp">200</span></h5>
+        <br>
+        <h5 class = "text-center">Attack: <span id = "incineroar-att">20</span></h5>
+     </div>
+     <div class = "col-md-2"></div>
+    </div>
+
+    <div class = "row">
+      <div class = "col-md-2"></div>
+      <div class = "col-md-8">
+        <h2 class = "text-center">Rules</h2>
+        <p class = "text-center">Your goal is to beat all of the other characters with one! You select your character by clicking their portrait. You select your foe by selecting their portait after. You can select a new foe after you beat your current one. Each character has their own special ability as well! Roy deals double damage against characters without swords. 
+          Ridley has a one in ten chance of dealing 4 times damage! Cloud will deal double damage every 5 hits, and Incineroar will deal 1 extra damage for every point of missing health! You win when you beat 
+          the three characters that you didn't pick. Goodluck!
+        </p>
+
+        <p>*** For those who are unaware, the characters from left to right: Roy, Ridley, Cloud, Incineroar.***</p>
+      </div>
+    </div>
+
+    </div>
+
+
+
+
+
+      <!--******** SCRIPT SOURCES ***********-->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+      <script src = "assets\javascript\javascript.js"></script>   
+    </body>
